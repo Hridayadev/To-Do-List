@@ -1,5 +1,7 @@
 body{
     background-image: url(background13.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,8 +23,11 @@ body::-webkit-scrollbar {
     padding: 10px;
     color: rgb(60, 0, 255);
 }
+h1{
+    text-shadow: 2px 2px 0px  rgb(255, 252, 252);
+}
 .container{
-    background-color: rgba(93, 0, 255, 0.231);
+    background-color: rgba(255, 255, 255, 0.563);
     height: 350px;
     width: 350px;
     padding: 10px;
