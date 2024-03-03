@@ -10,11 +10,21 @@ document.addEventListener("keypress", function(event) {
             addNew();
         }
     }
-    saveData();
 });
 
 
-document.querySelector(".addBtn").addEventListener("click", addNew)
+document.querySelector(".addBtn").addEventListener("click", function(event){
+    if(event.target==this){
+        let inputHo = document.querySelector(".inputArea");
+        var inputValue = inputHo.value;
+        if (inputValue.trim() === "") {
+            return;
+        } else {
+            addNew();
+        }
+    }
+});
+
 function addNew(){
     let inputHo = document.querySelector(".inputArea");
     var inputValue = inputHo.value;
@@ -45,8 +55,7 @@ function addNew(){
     button.addEventListener("click", function() {
         childNew.remove(); 
     });
-    childNew.appendChild(button);
-    saveData();    
+    childNew.appendChild(button);   
 }
 
 document.querySelector(".clearAll").addEventListener("click", clearAll);
@@ -55,9 +64,4 @@ function clearAll(){
     for(let i=0;i<=15;i++){
         listAll[i].remove();
     }
-    saveData();
-}
-
-function saveData(){
-    localStorage.setItem("data",listAll.innerHTML);
 }
