@@ -65,3 +65,5 @@ function clearAll(){
         listAll[i].remove();
     }
 }
+
+//Amazing code control flow
